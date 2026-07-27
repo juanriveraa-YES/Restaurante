@@ -1,11 +1,12 @@
 function ValidarInformacion() {
-    let categoria = document.getElementById("categoria").value;
-    let codigo_prodt = document.getElementById("codigo_producto").value;
-    let nombre_prodt = document.getElementById("nombre_producto").value;
-    let descripcion_prodt = document.getElementById("descripcion_producto").value;
-    let cantidad_prodt = document.getElementById("cantidad_productos").value;
-    let precio_unitario = document.getElementById("precio_unitario").value;
-    let provedor = document.getElementById("provedor").value;
+    let categoria = document.getElementById("id_categoria").value;
+    let codigo_prodt = document.getElementById("id_codigo_producto").value;
+    let nombre_prodt = document.getElementById("id_nombre_producto").value;
+    let descripcion_prodt = document.getElementById("id_descripcion_producto").value;
+    let cantidad_prodt = document.getElementById("id_cantidad_producto").value;
+    let precio_unitario = document.getElementById("id_precio_unitario_producto").value;
+    let provedor = document.getElementById("id_provedor_producto").value;
+
 
     if (!categoria || !codigo_prodt || !nombre_prodt || !descripcion_prodt || !cantidad_prodt || !precio_unitario || !provedor) {
         Swal.fire({
@@ -48,7 +49,7 @@ function ValidarInformacion() {
             icon: "success",
             title: "Informacion Guardada Correctamente",
             showConfirmButton: false,
-            timer: 1500
+            timer: 2000
         });
     }
 }

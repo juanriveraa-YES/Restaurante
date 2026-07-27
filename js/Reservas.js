@@ -1,10 +1,10 @@
 function ValidarInformacion() {
-    let nombre_completo = document.getElementById("nombre_completo").value;
-    let fecha_reserva = document.getElementById("fecha_reserva").value;
-    let cantidad_personas = document.getElementById("cantidad_personas").value;
+    let nombre_completo = document.getElementById("id_N_completo").value;
+    let fecha_reserva = document.getElementById("id_fecha_reservas").value;
+    let cantidad_personas = document.getElementById("id_cantidad_personas").value;
 
     if (
-        !nombre_completo ||
+        !nombre_completo || // nombre_completo = "" || nombre_completo = null 
         !fecha_reserva ||
         !cantidad_personas 
     ) {

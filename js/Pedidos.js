@@ -1,10 +1,10 @@
 function ValidarInformacion() {
-    let producto = document.getElementById("Producto").value;
-    let dreccion = document.getElementById("direccion").value;
-    let nombre_usuario = document.getElementById("nombre_usuario").value;
-    let cantidad = document.getElementById("cantidad").value;
-    let metodo_pago = document.getElementById("metodo_pago").value;
-    let telefono = document.getElementById("telefono").value;
+    let producto = document.getElementById("id_producto").value;
+    let dreccion = document.getElementById("id_direccion").value;
+    let nombre_usuario = document.getElementById("Nombre_usuario").value;
+    let cantidad = document.getElementById("id_cantidad").value;
+    let metodo_pago = document.getElementById("id_metodo_pago").value;
+    let telefono = document.getElementById("id_Telefono").value;
 
 
     if (

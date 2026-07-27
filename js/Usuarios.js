@@ -6,9 +6,10 @@ function ValidarInformacion() {
     let telefono = document.getElementById("telefono").value;
     let email = document.getElementById("email").value;
     let genero = document.querySelector('input[name="genero"]:checked').value;
-    let cargo = document.getElementById("cargo").value;
-    let fecha_nacimiento = document.getElementById("fecha_nacimiento").value;
-    let contrasena = document.getElementById("contrasena").value;
+    let cargo = document.getElementById("id_cargo").value;
+    let fecha_nacimiento = document.getElementById("id_fecha_nacimiento").value;
+    let contrasena = document.getElementById("id_contraseña").value;
+    
 
 
     if (
