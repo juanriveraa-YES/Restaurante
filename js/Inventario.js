@@ -7,25 +7,7 @@ function ValidarInformacion() {
     let precio_unitario = document.getElementById("precio_unitario").value;
     let provedor = document.getElementById("provedor").value;
 
-    if (
-        !categoria ||
-        !codigo_prodt ||
-        !nombre_prodt ||
-        !descripcion_prodt ||
-        !cantidad_prodt ||
-        !precio_unitario ||
-        !provedor
-    ) {
-        console.log(
-            `Informacion del Producto: \n
-            ${categoria} \n
-            ${codigo_prodt} \n
-            ${nombre_prodt} \n
-            ${descripcion_prodt} \n
-            ${cantidad_prodt} \n
-            ${precio_unitario} \n
-            ${provedor}`
-        );
+    if (!categoria || !codigo_prodt || !nombre_prodt || !descripcion_prodt || !cantidad_prodt || !precio_unitario || !provedor) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -45,6 +27,22 @@ function ValidarInformacion() {
             ${precio_unitario} \n
             ${provedor}`
         );
+        if (!/^[a-zA-Z]+$/.test(categoria)) {
+            console.log("Categoria debe contener letras")
+            Swal.fire({
+                title: "Categoria debe contener letras",
+                icon: "error"
+            });
+            return;
+        }
+        if (!/^\d+$/.test(codigo_prodt)) {
+            Swal.fire({
+                 title: "Codigo del producto debe contener números",
+                icon: "error"
+            });
+            return;
+        }
+
         Swal.fire({
             position: "top-end",
             icon: "success",
