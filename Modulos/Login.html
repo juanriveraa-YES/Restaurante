@@ -1,154 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-    body {
-            font-family: 'Georgia', serif; 
-            background-color: #121212;
-            color: #eaeaea;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+    <title>Módulo Login</title>
+    
+    <link rel="stylesheet" href="../css/login.css">
 
-        h1 {
-            color: #d4af37; 
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 28px;
-        }
-
-        hr {
-            width: 100%;
-            max-width: 420px;
-            border: 0;
-            height: 1px;
-            background-color: #d4af37;
-            margin-bottom: 30px;
-        }
-
-        form {
-            background-color: #1e1e1e;
-            padding: 40px 30px;
-            border-radius: 8px;
-            border: 1px solid #333;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            width: 100%;
-            max-width: 420px;
-            box-sizing: border-box;
-        }
-
-        label {
-            display: block;
-            font-weight: normal;
-            margin-bottom: 8px;
-            color: #b0b0b0;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 25px; 
-            background-color: #2a2a2a;
-            border: 1px solid #444;
-            color: #fff;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        input::placeholder {
-            color: #666;
-        }
-
-        input:focus {
-            border-color: #d4af37;
-            outline: none;
-            box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
-            background-color: #333;
-        }
-
-        button[type="submit"] {
-            background-color: #d4af37;
-            color: #121212;
-            border: none;
-            padding: 14px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            width: 100%;
-            margin-top: 15px;
-            transition: background-color 0.3s, transform 0.1s;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #f1c40f;
-        }
-        
-        button[type="submit"]:active {
-            transform: scale(0.98);
-        }
-
-        a {
-            display: block;
-            text-align: center;
-            margin-bottom: 20px;
-            color: #888;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        a:hover {
-            color: #d4af37;
-        }
-
-        br {
-            display: none;
-        }
-    </style>
 </head>
 <body>
     <h1>Modulo login</h1>
     <hr>
     <form action="">
         
-        <label for="">Cedula de Ciudadania:</label>
+        <label for="cedula_ciudadania">Cedula de Ciudadania:</label>
         <input type="number" id="cedula_ciudadania" required placeholder="Ingrese su documento de identidad">
         <br>
-        <label for="">Contraseña:</label>
+        
+        <label for="contrasena">Contraseña:</label>
         <input type="password" id="contrasena" required placeholder="Ingrese su contraseña">
         <br>
 
-        <select name="" id="id_tarjeta_identidad" required placeholder="Ingrese su tarjeta de identidad">
-            <option value="tarjeta_identidad"> 
-                Tarjeta de identidad
-            </option>
-            
+        <select name="" id="id_tarjeta_identidad" required>
+            <option value="tarjeta_identidad">Tarjeta de identidad</option>
         </select>
 
         <a href="../index.html">Volver al inicio</a>
         <button type="submit" id="btnGuardar">Ingresar</button>
 
-
     </form>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="../js/login.js"></script>
+
+    <!-- Usa esta dirección completa de SweetAlert -->
+    <script src="https://jsdelivr.net"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

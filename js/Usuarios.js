@@ -1,17 +1,23 @@
 function ValidarInformacion() {
-    let nombres = document.getElementById("nombres").value;
-    let apellidos = document.getElementById("apellidos").value;
-    let tipo_documento = document.getElementById("tipo_documento").value;
-    let documento_identidad = document.getElementById("documento_identidad").value;
-    let telefono = document.getElementById("telefono").value;
-    let email = document.getElementById("email").value;
-    let genero = document.querySelector('input[name="genero"]:checked').value;
-    let cargo = document.getElementById("id_cargo").value;
-    let fecha_nacimiento = document.getElementById("id_fecha_nacimiento").value;
-    let contrasena = document.getElementById("id_contraseña").value;
     
+    let nombres = document.getElementById("id_Nombre")?.value || "";
+    let apellidos = document.getElementById("id_Apellidos")?.value || "";
+    let tipo_documento = document.getElementById("id_tipo_documento")?.value || "";
+    let documento_identidad = document.getElementById("id_Numero_documento")?.value || "";
+    let telefono = document.getElementById("id_Telefono")?.value || "";
+    let email = document.getElementById("id_Correo_electronico")?.value || "";
+    let cargo = document.getElementById("id_cargo")?.value || "";
+    let fecha_nacimiento = document.getElementById("id_fecha_nacimiento")?.value || "";
+    let contraseña = document.getElementById("id_contraseña")?.value || "";
+    
+   
+    let generoElemento = document.querySelector('input[name="genero"]:checked');
+    let genero = generoElemento ? generoElemento.value : "";
 
+  
+    console.log("Validando campos...");
 
+   
     if (
         !nombres || !apellidos ||
         !tipo_documento || !documento_identidad ||
@@ -19,14 +25,6 @@ function ValidarInformacion() {
         !genero || !cargo ||
         !fecha_nacimiento || !contrasena
     ) {
-        console.log(
-            `Informacion del Usuario: \n
-            ${nombres} \n ${apellidos} \n
-            ${tipo_documento} \n ${documento_identidad} \n
-            ${telefono} \n ${email} \n
-            ${genero} \n ${cargo} \n
-            ${fecha_nacimiento} \n ${contrasena}`
-        );
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -34,24 +32,28 @@ function ValidarInformacion() {
             showConfirmButton: false,
             timer: 1500
         });
-    }
-    else {
+    } else {
         console.log(
-            `Informacion del Usuario: \n
-            ${nombres} \n ${apellidos} \n
-            ${tipo_documento} \n ${documento_identidad} \n
-            ${telefono} \n ${email} \n
-            ${genero} \n ${cargo} \n
-            ${fecha_nacimiento} \n ${contrasena}`
+            `Información del Usuario Completa: \n 
+        ${nombres} \n
+        ${apellidos} \n
+        ${documento_identidad} \n
+        ${telefono} \n
+        ${email} \n
+        ${cargo} \n
+        ${fecha_nacimiento} \n
+        ${contraseña} \n
+        ${nombres} \n`
         );
         Swal.fire({
             position: "top-end",
             icon: "success",
-            title: "Informacion Guardada Correctamente",
+            title: "Información Guardada Correctamente",
             showConfirmButton: false,
             timer: 1500
         });
     }
 }
+
 
 document.getElementById("btnGuardar").onclick = ValidarInformacion;

@@ -1,7 +1,7 @@
 function ValidarInformacion() {
     let tipo_documento = document.getElementById("id_tarjeta_identidad").value;
     let documento_identidad = document.getElementById("cedula_ciudadania").value;
-    let contrasena = document.getElementById("contrasena").value;
+    let contrasena = document.getElementByid("contrasena").value;
 
     if (
         !tipo_documento ||
