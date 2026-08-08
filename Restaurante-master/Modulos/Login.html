@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo Login</title>
+    
+    <link rel="stylesheet" href="../CSS/Login.css">
+
+
+</head>
+<body>
+    <h1>Modulo login</h1>
+    <hr>
+    <form action="">
+        
+        <label for="cedula_ciudadania">Cedula de Ciudadania:</label>
+        <input type="number" id="cedula_ciudadania" required placeholder="Ingrese su documento de identidad">
+        <br>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" required placeholder="Ingrese su contraseña">
+        <br>
+
+        <select name="" id="id_tarjeta_identidad" required>
+            <option value="tarjeta_identidad">Tarjeta de identidad</option>
+        </select>
+
+        <a href="../index.html">Volver al inicio</a>
+        <button type="submit" id="btnGuardar">Ingresar</button>
+
+    </form>
+
+    <!-- Usa esta dirección completa de SweetAlert -->
+    <script src="https://jsdelivr.net"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

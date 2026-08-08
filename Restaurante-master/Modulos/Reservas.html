@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../CSS/Reservas.css">
+
+
+</head>
+<body>
+    <h1>Modulo Reservas</h1>
+    <hr>
+    <form action="">
+        
+        <label for="">Tipo de mesa:</label>
+        <input type="text" id="id_mesa" required placeholder="Ingrese el tipo de mesa que requiere">
+        <br>
+
+        <label for="">Nombre completo:</label>
+        <input type="text" id="id_N_completo" required placeholder="Ingrese su Nombre completo">
+        <br>
+
+        <label for="">Fecha de Reserva:</label>
+        <input type="date" id="id_fecha_reservas" required placeholder="Ingrese Ingrese la fecha que reservo">
+        <br>
+
+        <label for="">cantidad de personas:</label>
+        <input type="number" id="id_cantidad_personas" required placeholder="Ingrese cuantas personas van a estar en la mesa">
+        <br>
+
+
+        <a href="../index.html">Volver al inicio</a>
+        <button type="submit" id="btnGuardar">Guardar</button>
+
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/reservas.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Usuarios</title>
+     <link rel="stylesheet" href="../CSS/Usuarios.css">
+</head>
+<body>
+    <h1>Modulo Usuarios</h1>
+    <hr>
+    <form action="">
+    
+
+        <label for="">Nombre:</label>
+        <input type="text" id="id_Nombre" required placeholder="Ingrese su Nombre">
+        <br>
+        
+        <label for="">Apellidos:</label>
+        <input type="text" id="id_Apellidos" required placeholder="Ingrese sus Apellidos">
+        <br>
+
+        <label for="tipo_documento">tipo de documento:</label>
+        <select id="id_tipo_documento" name="tipo_documento" requiered>
+            <option value=""disabled selected> Seleccione una opcion</option>
+            <option value="CC"> cedula de ciudadania</option>
+            <option value="TI"> tarjeta de identidad</option>
+            <option value="CE"> cedula de extranjeria</option>
+        </select>
+        <br>
+
+        <label for="">Numero de documento:</label>
+        <input type="number" id="id_Numero_documento" required placeholder="Ingrese su numero de documento">
+        <br>
+
+        <label for="">Telefono:</label>
+        <input type="number" id="id_Telefono" required placeholder="Ingrese su Telefono">
+        <br>
+
+        <label for="">Correo electronico:</label>
+        <input type="email" id="id_Correo_electronico" required placeholder="Ingrese su Correo electronico">
+        <br>
+
+        <label for="Genero">Genero:</label>
+        <select id="id_Genero" name="Genero" requiered>
+            <option value=""disabled selected> Seleccione una opcion</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="O">Otro</option>
+        </select>
+        <br>
+
+        <label for="">Cargo:</label>
+        <input type="text" id="id_cargo" required placeholder="Ingrese su Cargo">
+        <br>
+
+        <label for="">Fecha de nacimiento:</label>
+        <input type="date" id="id_fecha_nacimiento" required placeholder="Ingrese su Fecha de nacimiento">
+        <br>
+
+        <label for="">Contraseña:</label>
+        <input type="password" id="id_contraseña" required placeholder="Ingrese su Contrasena">
+        <br>
+
+                
+        <a href="../index.html">Volver al inicio</a>
+        <button type="submit" id="btnGuardar">Guardar</button>
+
+
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/usuarios.js"></script>
+</body>
+</html>
